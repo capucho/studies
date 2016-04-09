@@ -1,0 +1,7 @@
+language: ruby
+rvm:
+  - 2.2.0p0
+
+ # Gemfile
+# for CRuby, Rubinius, including Windows and RubyInstaller
+gem "sqlite3", :platform => [:ruby, :mswin, :mingw]

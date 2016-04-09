@@ -1,0 +1,9 @@
+<h1>Listing Items</h1>
+
+<% @items.each do |item| %>
+
+    <%= render :partial => 'item', :object => item%>
+
+<% end %>
+
+<br>

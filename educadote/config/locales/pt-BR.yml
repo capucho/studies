@@ -1,0 +1,83 @@
+pt-BR:
+    users:
+        new:
+            title: Cadastro
+        edit:
+            title: Editar Perfil
+        show:
+            title: "Perfil: %{user_name}"
+            edit: 'Editar Perfil'
+        confirmation:
+            sucess: 'Email confirmado com sucesso, obrigado!'
+    user_sessions:
+        new:
+            title: 'Login'
+            sign_up: 'Cadastre-se'
+    dialogs:
+        destroy: 'Você tem certeza que quer remover?'
+    projects:
+        index:
+            title: 'Quartos disponíveis'
+        project:
+            owner_html: '&mdash; %{owner} (%{when})'
+            edit: 'Editar'
+            destroy: 'Remover'
+        donation:
+            login_to_donate: 'Faça o login para doar'
+            stats:
+                zero: 'Não há doacoes'
+                one: '%{sum} (1 doacao)'
+                other: '%{sum} (%{count} doacoes)'
+    signup_mailer:
+        confirm_email:
+          subject: 'Educadote - Confirme seu email'
+          title: 'Seja bem vindo ao Educadote!'
+          body: |
+              Seja bem vindo ao Educadote, %{full_name}.
+              O Educadote é o lugar ideal para você ajudar a educação de nossas crianças da rede pública de ensino.
+          confirm_link_html: 'Para você começar a usar o site, acesse o
+                  link: %{link}'
+          thanks_html: 'Obrigado por se cadastrar no %{link}.'
+
+    links:
+        back: Voltar
+        show: Exibir
+    layout:
+        signup: Cadastrar Usuario
+        signin: Logar
+        my_profile: 'Meu Perfil'
+        signout: Sair
+    general:
+        form_error: Há erros no formulário, por favor verifique.
+    flash:
+        notice:
+            signed_in: 'Usuario Logado!'
+            signed_out: 'Logout efetuado com sucesso. Até logo...'
+        alert:
+            needs_login: 'Para continuar, voce precisa estar logado'
+    activerecord:
+        models:
+            user: Usuário
+        attributes:
+            user:
+                email: Email
+                full_name: Nome completo
+                country: Pais
+                state: Estado
+                city: Cidade
+                address: Endereco
+                phone_number: Telefone
+                password: Senha
+                password_confirmation: Confirme sua senha
+    activemodel:
+        attributes:
+            user_session:
+                email: Email
+                password: Senha
+        errors:
+            messages:
+                invalid_login: 'Usuário ou senha inválidos'
+    helpers:
+      submit:
+        user_session:
+          create: 'Entrar'

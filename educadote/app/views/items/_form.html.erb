@@ -1,0 +1,25 @@
+<% if @item.errors.any? %>
+<div id="error_explanation">
+    <%= t 'general.form_error' %>
+</div>
+<% end %>
+<%= form_for(@item) do |f| %>
+<div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+    <%= error_tag @item, :name %>
+</div>
+<div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+    <%= error_tag @item, :description %>
+</div>
+<div class="field">
+    <%= f.label :price %><br>
+    <%= f.text_field :price %>
+    <%= error_tag @item, :price %>
+</div>
+<div class="actions">
+    <%= f.submit "Criar"%>
+</div>
+<% end %>

@@ -1,0 +1,64 @@
+<% if @user.errors.any? %>
+<div id="error_explanation">
+    <%= t 'general.form_error' %>
+</div>
+<% end %>
+
+<%= form_for(@user) do |f| %>
+<p>
+    <%= f.label :full_name %>
+    <%= f.text_field :full_name %>
+    <%= error_tag @user, :full_name %>
+</p>
+<p>
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+    <%= error_tag @user, :email %>
+</p>
+<p>
+    <%= f.label :country %>
+    <%= f.text_field :country %>
+    <%= error_tag @user, :country %>
+</p>
+<p>
+    <%= f.label :state %>
+    <%= f.text_field :state %>
+    <%= error_tag @user, :state %>
+</p>
+<p>
+    <%= f.label :city %>
+    <%= f.text_field :city %>
+    <%= error_tag @user, :city %>
+</p>
+<p>
+    <%= f.label :address %>
+    <%= f.text_field :address %>
+    <%= error_tag @user, :address %>
+</p>
+<p>
+    <%= f.label :phone_number %>
+    <%= f.text_field :phone_number %>
+    <%= error_tag @user, :phone_number %>
+</p>
+
+<p>
+    <%= select(:user, :user_type, [['Professor', 1], ['Doador', 2]]) %>
+
+</p>
+
+<p>
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+    <%= error_tag @user, :password %>
+</p>
+<p>
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation %>
+    <%= error_tag @user, :password_confirmation %>
+</p>
+
+
+<p class="actions">
+    <%= f.submit "Criar" %>
+</p>
+<% end %>

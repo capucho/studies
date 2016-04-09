@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: Projeto 1
+  project_type: Teste1
+  description: Teste2
+  user_id: 1
+
+empty_name:
+  name:
+  project_type: Teste2
+  description: Teste2
+  user_id: 1
+
+empty_project_type:
+  name: Sem tipo
+  description: Sem tipo
+  project_type:
+  user_id: 1
+
+empty_description:
+  name: Sem descricao
+  description:
+  project_type: Sem descricao
+  user_id: 1

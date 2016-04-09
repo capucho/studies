@@ -1,0 +1,22 @@
+<nav>
+    <ul>
+
+        <li><%= link_to t('layout.my_profile'), user_path(current_user) %>
+        </li>
+        <% if current_user.is_teacher %>
+        <li>
+
+            <%= link_to 'Meus projetos', my_projects_projects_path %> 
+
+        </li>
+        <li>
+
+            <%= link_to 'Cadastrar Projetos' , new_project_path %>
+
+        </li>
+        <% end %>
+        <li>
+            <%= link_to t('layout.signout'), user_sessions_path, :method => :delete %>
+        </li>
+    </ul>
+</nav>

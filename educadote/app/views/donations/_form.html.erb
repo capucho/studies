@@ -1,0 +1,16 @@
+<% if @donation.errors.any? %>
+<div id="error_explanation">
+    <%= t 'general.form_error' %>
+</div>
+
+<% end %>
+<%= form_for(@donation) do |f| %>
+<div class="field">
+    <%= f.label :value %><br>
+    <%= f.text_field :value %>
+    <%= error_tag @donation, :value %>
+</div>
+<div class="actions">
+    <%= f.submit %>
+</div>
+<% end %>

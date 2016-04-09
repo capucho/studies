@@ -1,0 +1,22 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  project_id:
+  name: MyString
+  description: MyString
+  price: MyString
+
+empty_name:
+  name:
+  description: nome vazio
+  price: 10
+
+empty_description:
+  name: Descricao vazia
+  description:
+  price: 20
+
+empty_price:
+  name: Preco vazio
+  description: Preco vazio
+  price:

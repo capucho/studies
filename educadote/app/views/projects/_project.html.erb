@@ -1,0 +1,84 @@
+<article class="project">
+    <h2><%= link_to project.name, project %></h2>
+
+    <span class="created">
+        <%= t '.owner_html',:owner => project.name,:when => l(project.created_at, :format => :short) %>
+    </span>
+
+    <span>
+         - R$<%= project.donations.total %> de R$ <%= project.items.total %>
+    </span>
+    <p>
+        <span class="location">
+            <%= link_to project.description,"https://maps.google.com/?q=#{project.description}",
+                :target => :blank %>
+        </span>
+    </p>
+    <p>Descricao do projeto: <%= project.description %></p>
+    <h1>
+         Materiais
+    </h1>
+    <table class="materiais">
+    <tr>
+        <td>
+            <b>Nome</b>
+        </td>
+        <td>
+            <b>Preco</b>
+        </td>
+        <td>
+            <b>Descricao</b>
+        </td>
+        <td>
+            <b>Quantidade</b>
+        </td>
+        <% if belongs_to_user(project) %>
+        <td>
+            <b> Remover Item</b>
+        </td>
+        <% end %>
+    </tr>
+
+    <% project.items.each do |i| %>
+        <tr>
+
+                <td>
+                    <%= i.name %>
+                </td>
+                <td>
+                    R$<%= i.price %>
+                </td>
+                <td>
+                    <%= i.description %>
+                </td>
+                <td>
+                    10
+                </td>
+                <% if belongs_to_user(project) %>
+                <td>
+                    <%=
+                    link_to(t('.destroy'), item_path(:project_id => project.id, :id => i.id), method: :delete) %>
+                </td>
+                <% end %>
+        </tr>
+
+
+    <% end %>
+    </table>
+    <% if belongs_to_user(project) %>
+        <ul>
+            <li><%= link_to t('.edit'), edit_project_path(project) %> |
+                <%= link_to(t('.destroy'), project_path(project), method: :delete) %>
+            </li>
+            <li>
+                <%= link_to 'Adicionar Item no projeto', new_item_path(:project_id => project.id) %>
+            </li>
+        </ul>
+    <% end %>
+    <ul>
+        <li>
+            <%= link_to 'Doar', new_donation_path(:project_id => project.id) %>
+        </li>
+    </ul>
+
+</article>

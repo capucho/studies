@@ -1,0 +1,45 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+all_right:
+    full_name: Johnny B. Good
+    email: johnny@email.com
+    country: Brasil
+    state: ES
+    city: Serra
+    address: Rodovia ES 010
+    phone_number: 123456789
+    user_type: Professor
+    password_digest: abcd
+
+name_too_small:
+    full_name: ab
+    email: testeteste@email.com
+    country: Brasil
+    state: ES
+    city: Serra
+    address: Rodovia ES 010
+    phone_number: 098765411
+    user_type: Donor
+    password_digest: abcde
+
+email_invalid:
+    full_name: abcdfgeuyrt
+    email: teste@emailcom
+    country: Brasil
+    state: ES
+    city: Serra
+    address: Rodovia ES 010
+    phone_number: 098765411
+    user_type: Donor
+    password_digest: abcde
+
+state_invalid:
+    full_name: afafaaafafa
+    email: teste@email.com
+    country: Brasil
+    state: ESAASS
+    city: Serra
+    address: Rodovia ES 010
+    phone_number: 098765411
+    user_type: Donor
+    password_digest: abcde

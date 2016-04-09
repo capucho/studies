@@ -1,0 +1,2 @@
+# educadote-jpa
+Educadote Model
